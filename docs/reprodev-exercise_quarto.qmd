@@ -69,3 +69,6 @@ mice::boys |>
   ggmice::plot_pattern()
 ```
 
+
+### Goede content
+{{< video https://www.youtube.com/watch?v=t2kD6tvLESA >}}
