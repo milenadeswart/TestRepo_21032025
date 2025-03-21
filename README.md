@@ -10,6 +10,7 @@ The goal of my-reproducible-manuscript is to practice writng reproducible code p
 
 ## Author
 Jesse je boy Ruigrok
+En ook Hape
 
 ### Date
 21-03-2025
