@@ -1,0 +1,71 @@
+---
+title: "reprodev-exercise_quarto"
+format: html
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see [https://quarto.org](https://quarto.org).
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this 
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+## Meet Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. 
+To learn more about Quarto see [https://quarto.org](https://quarto.org).
+
+## Meet the boys data 
+
+The `boys` data from the [`mice`](https://github.com/amices/mice){.pkg} package is a random sample of 10% from the cross-sectional data used to construct the Dutch growth references 1997. Variables `gen` and `phb` are ordered factors. `reg` is a factor.
+
+The following table shows the first 6 rows of the `boys` data.
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+head(mice::boys)
+```
+:::
+
+::: {.column width="40%"}
+![](https://amices.org/mice/logo.png){fig-align="right" width=60%}
+::: 
+::::
+
+
+```{r}
+#| file: "../scripts/read_data.R"
+#| eval: true 
+```
+
+```{r}
+head(boys)
+``` 
+
+#| code-overflow: wrap
+Not every value in the `mice::boys` set is observed. This may pose problems with the analysis of the `boys` data. To get an idea about the problem, we can use missing data patterns. created the [`ggmice`](https://github.com/amices/ggmice){.pkg} package to create a [`ggplot2`](https://ggplot2.tidyverse.org){.pkg} [@ggplot2] type plot of the missing values in the `boys` data.
+
+```{r mdpattern}
+library(mice)
+library(ggmice)
+
+# visualize ggplot2-like missing data pattern
+mice::boys |> 
+  ggmice::plot_pattern()
+```
+
