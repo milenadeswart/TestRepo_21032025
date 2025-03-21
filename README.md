@@ -14,6 +14,7 @@ Isabelloooo
 Luuk
 En ook Hape
 En Milena
+![](https://amices.org/mice/logo.png){fig-align="right" width=50%}
 
 ### Date
 21-03-2025
